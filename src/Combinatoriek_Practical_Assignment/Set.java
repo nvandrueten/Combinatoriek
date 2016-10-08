@@ -12,53 +12,62 @@ import java.util.ArrayList;
  * @author niels
  * @date 8 October 2016.
  * @version 1.0
- * 
+ *
  */
 
 public class Set {
-    
+
     private ArrayList<Integer> set;
-    
-    
-    public Set(int n){
+
+    public Set(int n) {
         this.set = new ArrayList<>();
         fillArray(n);
         System.out.println("Array: " + showArray());
         System.out.println(showArrayAdvance());
     }
-    
-    private void fillArray(int n){
-        for(int i = 1; i <= n; i++ ) {
-            set.add(i);
+
+    private void fillArray(int n) {
+        if (n < 0) {
+            System.out.println("n is negative");
+        } else {
+            for (int i = 1; i <= n; i++) {
+                set.add(i);
+            }
         }
     }
-    
-    private String showArray(){
+
+    private String showArray() {
         String result = "";
-        for(int i = 1; i <= set.size(); i++){
-            if( i == 1 ){
-                result += "{" + i + ",";
+
+        if (set.isEmpty()) {
+            result += "{}";
+        } else if (set.size() == 1) {
+            result += "{" + set.get(0) + "}";
+        } else {
+            for (int i = 1; i <= set.size(); i++) {
+                if (i == 1) {
+                    result += "{" + i + ",";
+                } else if (i == set.size()) {
+                    result += i + "}";
+                } else {
+                    result += "" + i + ",";
+                }
             }
-            else if ( i == set.size() ){
-                result += i + "}";
-            }
-            else {
-                result += "" + i + ",";
-            }
+            result += "\n";
+
         }
-        result += "\n";
         return result;
     }
-    
-    private String showArrayAdvance(){
+
+    private String showArrayAdvance() {
         String result = "";
         result += "Location: ";
-        for (int i = 0; i < set.size(); i++){
+        for (int i = 0; i < set.size(); i++) {
             result += i + " ";
         }
         result += "\n";
         result += "Value\t: ";
-        for (int i = 0; i < set.size(); i++){
+        for (int i = 0; i < set.size(); i++) {
             result += set.get(i) + " ";
         }
         return result;
