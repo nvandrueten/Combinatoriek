@@ -15,7 +15,7 @@ public class Main {
 
     
     public static void main(String[] args) {
-        Set set = new Set(-1);
+        Set set = new Set(3);
     }
     
 }
