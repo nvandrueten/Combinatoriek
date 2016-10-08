@@ -1,22 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Combinatoriek_Practical_Assignment;
 
 /**
  *
  * @author niels
+ * @date 8 October 2016.
+ * @version 1.0
+ * 
+ * Problem: Given a positive integer n, visualize all the derangements of the set {1,2,3,...,n}. 
+ *          Perform some analysis that shows for which values of n it is no longer possible to 
+ *          visualize all these derangements.
+ * 
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Hello World!");
+        Set set = new Set(10);
     }
     
 }
