@@ -10,7 +10,7 @@ import java.util.ArrayList;
 /**
  *
  * @author niels
- * @date 8 October 2016.
+ * @date 8 October 2016
  * @version 1.0
  *
  */

@@ -3,7 +3,7 @@ package Combinatoriek_Practical_Assignment;
 /**
  *
  * @author niels
- * @date 8 October 2016.
+ * @date 8 October 2016
  * @version 1.0
  * 
  * Problem: Given a positive integer n, visualize all the derangements of the set {1,2,3,...,n}. 
