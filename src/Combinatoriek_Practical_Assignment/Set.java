@@ -23,10 +23,8 @@ public class Set {
     public Set(int n){
         this.set = new ArrayList<>();
         fillArray(n);
-        System.out.println(set.get(0));
-        System.out.println(set.get(1));
-        System.out.println(set.get(2));
-        showArray();
+        System.out.println("Array: " + showArray());
+        System.out.println(showArrayAdvance());
     }
     
     private void fillArray(int n){
@@ -35,7 +33,7 @@ public class Set {
         }
     }
     
-    private void showArray(){
+    private String showArray(){
         String result = "";
         for(int i = 1; i <= set.size(); i++){
             if( i == 1 ){
@@ -49,6 +47,20 @@ public class Set {
             }
         }
         result += "\n";
-        System.out.println(result);
+        return result;
+    }
+    
+    private String showArrayAdvance(){
+        String result = "";
+        result += "Location: ";
+        for (int i = 0; i < set.size(); i++){
+            result += i + " ";
+        }
+        result += "\n";
+        result += "Value\t: ";
+        for (int i = 0; i < set.size(); i++){
+            result += set.get(i) + " ";
+        }
+        return result;
     }
 }
