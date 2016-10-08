@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Main;
+package Combinatoriek_Practical_Assignment;
 
 /**
  *
  * @author niels
  */
-public class Combinatoriek_Practical_Assignment {
+public class Main {
 
     /**
      * @param args the command line arguments
