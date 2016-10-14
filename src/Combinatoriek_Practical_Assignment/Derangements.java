@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Derangements {
 
     private ArrayList<Integer> oplossing;
-    private ArrayList<Integer> ongebruikt;
+    private ArrayList<Integer> ongebruikt; // ArrayList met de ongebruikte integers.
 
     public Derangements(int n) {
         this.oplossing = fillOplossing(n);
