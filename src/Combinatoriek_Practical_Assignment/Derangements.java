@@ -22,8 +22,6 @@ public class Derangements {
     }
 
     public void start(int plaatsNr) {
-        //System.out.println(plaatsNr);
-        //System.out.println(oplossing.size());
         if (plaatsNr >= oplossing.size())
             print(oplossing);
        
@@ -40,22 +38,20 @@ public class Derangements {
     }
 
     private ArrayList<Integer> fillOplossing(int n) {
-        ArrayList<Integer> oplossing = new ArrayList<>();
+        ArrayList<Integer> array = new ArrayList<>();
         for (int i = 0; i < n ; i++){
-            oplossing.add(0);
+            array.add(0);
         }
         
-        return oplossing;
+        return array;
     }
 
     private ArrayList<Integer> fillOngebruikt(int n) {
-        ArrayList<Integer> ongebruikt = new ArrayList<Integer>();
-        
+        ArrayList<Integer> array = new ArrayList<Integer>();
         for (int i = 0  ; i < n ; i++){
-            ongebruikt.add(i+1);
+            array.add(i+1);
         }
-        
-        return ongebruikt;
+        return array;
     }
     
     private void print(ArrayList<Integer> oplossing){
@@ -70,5 +66,16 @@ public class Derangements {
             }
         }
         System.out.println(result);
+    }
+    
+    private void printSB(ArrayList<Integer> oplossing){
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        for (Integer i : oplossing){
+            sb.append(i + ",");
+        }
+        sb.setLength(sb.length() - 1);
+        sb.append("}");
+        System.out.println(sb);
     }
 }
