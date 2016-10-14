@@ -13,7 +13,7 @@ public class Main {
 
     
     public static void main(String[] args) {
-        Derangements d = new Derangements(10);
+        Derangements d = new Derangements(4);
         d.start(0);
     }
     
