@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Derangements {
 
-    private ArrayList<Integer> oplossing;
+    private ArrayList<Integer> oplossing;  //ArrayList met de oplossing.
     private ArrayList<Integer> ongebruikt; // ArrayList met de ongebruikte integers.
 
     public Derangements(int n) {
