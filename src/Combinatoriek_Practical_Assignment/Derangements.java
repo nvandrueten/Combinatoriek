@@ -1,6 +1,5 @@
 package Combinatoriek_Practical_Assignment;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 
 /**
