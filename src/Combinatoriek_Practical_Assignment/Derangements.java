@@ -15,22 +15,29 @@ public class Derangements {
 
     private ArrayList<Integer> oplossing;  //ArrayList met de oplossing.
     private ArrayList<Integer> ongebruikt; // ArrayList met de ongebruikte integers.
-
+    private int oplossingen;
+    
     public Derangements(int n) {
         this.oplossing = fillOplossing(n);
         this.ongebruikt = fillOngebruikt(n);
+        this.oplossingen = 0;
     }
 
-    public void start(int plaatsNr) {
-        if (plaatsNr >= oplossing.size())
+    public void start(int plaatsNr){
+        recursion(plaatsNr);
+        System.out.println("Aantal oplossingen: " + oplossingen);
+    }
+    public void recursion(int plaatsNr) {
+        if (plaatsNr >= oplossing.size()){
             print(oplossing);
-       
+            oplossingen++;
+        }
         for (int i = 0; i < oplossing.size(); i++) {
 
             if (ongebruikt.get(i) != plaatsNr + 1 && ongebruikt.get(i) != 0 ) {
                 oplossing.set(plaatsNr, ongebruikt.get(i));
                 ongebruikt.set(i, 0);
-                start(plaatsNr+1);
+                recursion(plaatsNr+1);
                 ongebruikt.set(i,oplossing.get(plaatsNr));
                 oplossing.set(plaatsNr, 0);  //
             }
