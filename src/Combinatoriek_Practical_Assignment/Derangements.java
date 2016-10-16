@@ -1,5 +1,6 @@
 package Combinatoriek_Practical_Assignment;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 /**
@@ -26,7 +27,13 @@ public class Derangements {
     public void start(int plaatsNr){
         recursion(plaatsNr);
         System.out.println("Aantal oplossingen: " + oplossingen);
+        String s = "";
+        for (int i = 0; i < 14; i++){
+            System.out.println(i + ": " + countDerangements(i) + " derangements");
+        }
     }
+    
+    
     public void recursion(int plaatsNr) {
         if (plaatsNr >= oplossing.size()){
             print(oplossing);
@@ -43,7 +50,17 @@ public class Derangements {
             }
         }
     }
-
+    
+    private int countDerangements(int n){
+        if (n==0)
+            return 1;
+        if (n==1)
+            return 0;
+        else {
+            return (n-1)*(countDerangements(n-1) + countDerangements(n-2));
+        }
+    }
+    
     private ArrayList<Integer> fillOplossing(int n) {
         ArrayList<Integer> array = new ArrayList<>();
         for (int i = 0; i < n ; i++){
