@@ -24,8 +24,8 @@ public class Derangements {
         this.counter = 0;
     }
 
-    public void start(int plaatsNr) {
-        recursion(plaatsNr);
+    public void start() {
+        recursion(0);
     }
 
     public void visualize() {

@@ -26,7 +26,7 @@ public class Main {
             System.out.println("1 derangement.");
         } else {
             Derangements d = new Derangements(n);
-            d.start(0);
+            d.start();
             System.out.println(d.getCounter() + " derangements.");
             System.out.print("visualize derangements? [y/n]: ");
             char c = scanner.next().charAt(0);
