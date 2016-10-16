@@ -34,7 +34,7 @@ public class Derangements {
         }
     }
 
-    public void recursion(int plaatsNr) {
+    private void recursion(int plaatsNr) {
         if (plaatsNr >= solutions.size()) {
             print(solutions);
             counter++;
@@ -50,7 +50,7 @@ public class Derangements {
         }
     }
 
-    public long countDerangements(int n) {
+    private long countDerangements(int n) {
         if (n == 0) {
             return 1L;
         }
