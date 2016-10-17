@@ -28,7 +28,7 @@ public class Derangements {
     }
 
     public void visualize() {
-        for (int i = 0; i < 23; i++) {
+        for (int i = 0; i < 21; i++) {
             System.out.println(i + ": " + countDerangements(i) + " derangements");
         }
     }
